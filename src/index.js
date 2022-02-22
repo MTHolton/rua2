@@ -7,8 +7,6 @@ import UserList from "./components/user_list";
 import UserDetail from "./components/user_detail";
 import reportWebVitals from "./reportWebVitals";
 
-//display gender
-//more info per person
 //bootstrap
 
 class App extends Component {
