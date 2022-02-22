@@ -11,27 +11,31 @@ const options = [
 //   <Select options={options} />
 // )
 
-class SearchBar extends Component {
+class NatSearchBar extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			term: { value: "US", label: "United States" },
+			selectedNat: { value: "US", label: "United States" },
 		};
 	}
 
-	handleChange = (term) => {
-		this.setState({ term });
-		this.props.onSearchTermChange(term.value);
+	handleChange = (selectedNat) => {
+		this.setState({ selectedNat });
+		this.props.onSearchTermChange(selectedNat.value);
 	};
 
 	render() {
-		const { term } = this.state;
+		const { selectedNat } = this.state;
 
 		return (
-			<Select value={term} onChange={this.handleChange} options={options} />
+			<Select
+				value={selectedNat}
+				onChange={this.handleChange}
+				options={options}
+			/>
 		);
 	}
 }
 
-export default SearchBar;
+export default NatSearchBar;
